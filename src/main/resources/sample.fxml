@@ -1,0 +1,25 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<BorderPane fx:controller="Controller"
+            xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <MenuBar>
+            <Menu text="Open">
+                <MenuItem text="Open Old Mappings" onAction="#openOldMappings"/>
+                <MenuItem text="Open New Mappings" onAction="#openNewMappings"/>
+            </Menu>
+            <Menu text="Save">
+                <MenuItem text="Save" onAction="#save"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <HBox>
+            <TreeView fx:id="oldMappingsTree" prefWidth="9999">
+            </TreeView>
+            <TreeView fx:id="newMappingsTree" prefWidth="9999">
+            </TreeView>
+        </HBox>
+    </center>
+</BorderPane>
